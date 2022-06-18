@@ -1,0 +1,73 @@
+@keyframes rayoSol{
+    from{
+        filter: drop-shadow(0 0 0px rgb(231, 112, 0));
+    }to{
+        filter: drop-shadow(0 0 15px rgb(231, 112, 0));
+    }
+}
+
+@keyframes movSol{
+    from{
+        
+        right: 15%;
+    }to{
+        right: 80%;
+    }
+}
+
+@keyframes sombraTierra{
+    from{
+        box-shadow: -150px 200px 0px -8px rgba(0,0,0,0.74);
+    }to{
+        box-shadow: 150px 200px 0px -8px rgba(0,0,0,0.74);
+    }
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sol{
+    width: 260px;
+    height:240px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    
+    position: absolute;
+    top: 70px;
+    right: 70px;
+
+    animation: 4s movSol infinite linear alternate;
+}
+
+.sol img {
+    width: 135%;
+    height: 135%;
+    object-fit: scale-down;
+
+    animation: 1s rayoSol infinite alternate;
+}
+
+.world{
+    width: 400px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: 4s sombraTierra infinite linear alternate;
+}
+
+.world img {
+    width: 105%;
+    
+      
+}
